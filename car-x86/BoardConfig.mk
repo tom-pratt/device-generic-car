@@ -3,8 +3,16 @@
 # Product-specific compile-time definitions.
 #
 
-# same as x86 except HAL
-include device/generic/x86_64/BoardConfig.mk
+# The generic product target doesn't have any hardware-specific pieces.
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_KERNEL := true
+
+TARGET_ARCH := x86
+TARGET_CPU_ABI := x86
+TARGET_CPU_SMP := true
+
+SMALLER_FONT_FOOTPRINT := true
+MINIMAL_FONT_FOOTPRINT := true
 
 # Build OpenGLES emulation libraries
 BUILD_EMULATOR_OPENGL := true
@@ -17,7 +25,6 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 69206016
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 512
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
-TARGET_USES_CAR_FUTURE_FEATURES := true
 
 BOARD_SEPOLICY_DIRS += \
      packages/services/Car/car_product/sepolicy \
