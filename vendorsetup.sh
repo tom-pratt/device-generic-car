@@ -23,4 +23,4 @@
 add_lunch_combo aosp_car_emu_arm-userdebug
 add_lunch_combo aosp_car_emu_arm64-userdebug
 add_lunch_combo aosp_car_emu_x86-userdebug
-add_lunch_combo aosp_car_emu_x86_64-userdebug
+add_lunch_combo aosp_car_x86_64-userdebug
